@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  practice-db:
+    image: postgres:latest
+    container_name: practice.Db
+    environment:
+      - POSTGRES_DB=practice
+      - POSTGRES_USER=practice_user
+      - POSTGRES_PASSWORD=9d9dfbfbfdfd@S
+    volumes:
+      - ./.container_database/database_practice:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
